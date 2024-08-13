@@ -31,6 +31,10 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
+    user_location: {
+        type: String,
+        required: true
+    },
     user_like: [String]
 }, { timestamps: true });
 

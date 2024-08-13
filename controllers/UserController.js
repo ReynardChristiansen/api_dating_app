@@ -35,7 +35,7 @@ const getUser = async (req, res) => {
 
 // Create a new user
 const createUser = async (req, res) => {
-    const { user_name, user_password, user_dob, user_gender,user_age,user_image, user_role, user_like } = req.body;
+    const { user_name, user_password, user_dob, user_gender,user_age,user_image, user_role, user_like, user_location } = req.body;
 
     try {
         const existingUser = await User.findOne({ user_name });
@@ -53,6 +53,7 @@ const createUser = async (req, res) => {
             user_age,
             user_image,
             user_role,
+            user_location,
             user_like
         });
 
@@ -153,6 +154,7 @@ const loginUser = async (req, res) => {
                 user_age: user.user_age,
                 user_image: user.user_image,
                 user_role: user.user_role,
+                user_location: user.user_location,
                 user_like: user.user_like,
             });
         } else {
