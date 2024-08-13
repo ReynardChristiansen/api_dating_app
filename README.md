@@ -34,6 +34,7 @@ Updating and Register a user require a request body in the following format:
             "user_age": "STRING",
             "user_image": "STRING",
             "user_role": "STRING",
+            "user_location": "STRING",
             "user_like": []
     }
 
